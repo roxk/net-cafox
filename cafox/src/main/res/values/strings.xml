@@ -1,0 +1,10 @@
+<resources>
+
+	<!-- activity_crash_report -->
+	<string name="activity_crash_report_app_name">Crash Report</string>
+	<string name="activity_crash_report_surprise">Oops!</string>
+	<string name="activity_crash_report_instruction">It seems that the app you were using has crashed. Click on the crash information below to copy it and send it to the developers of the app to help them fix it.</string>
+	<string name="activity_crash_report_crash_info_title">Crash information</string>
+	<string name="activity_crash_report_crash_info_copied">Crash information copied.</string>
+
+</resources>

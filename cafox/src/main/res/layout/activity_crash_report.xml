@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+
+	<!-- Action bar -->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:paddingLeft="16dp"
+		android:paddingRight="16dp"
+		android:background="?attr/colorPrimary"
+		android:gravity="center_vertical"
+		android:elevation="4dp"
+		android:textSize="20sp"
+		android:fontFamily="sans-serif-medium"
+		android:textColor="@android:color/white"
+		android:text="@string/activity_crash_report_app_name"/>
+
+	<!-- Scroller -->
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<!-- Content wrapper -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<!-- Surprise -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:paddingTop="20dp"
+				android:paddingBottom="16dp"
+				android:textSize="34sp"
+				android:fontFamily="sans-serif-light"
+				android:textColor="@color/foreground_black_primary"
+				android:text="@string/activity_crash_report_surprise"/>
+
+			<!-- Instruction -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:paddingBottom="8dp"
+				android:textSize="16sp"
+				android:textColor="@color/foreground_black_primary"
+				android:text="@string/activity_crash_report_instruction" />
+
+			<!-- Crash information title -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="48dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:gravity="center_vertical"
+				android:textSize="14sp"
+				android:fontFamily="sans-serif-medium"
+				android:textColor="?attr/colorPrimary"
+				android:text="@string/activity_crash_report_crash_info_title"/>
+
+			<!-- Crash info -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/info"
+				android:padding="16dp"
+				android:textSize="16sp"
+				android:textColor="@color/foreground_black_primary" />
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<declare-styleable name="CircularBitmapView">
+
+		<!-- Color used to draw circle when there is no bitmap. Can be transparent. -->
+		<attr name="noBitmapColor" format="reference|color"/>
+
+		<!-- How the view should adjust its view bound. All sides should be of the same length as the reference side. -->
+		<attr name="viewBoundType" format="enum">
+
+			<!-- Adjust view bound according to width, It is the default. -->
+			<enum name="match_parent_width" value="1" />
+
+			<!-- Adjust view bound according to height. -->
+			<enum name="match_parent_height" value="2" />
+
+			<!-- Adjust view bound according to the shorter side. -->
+			<enum name="match_shorter" value="3" />
+
+			<!-- Adjust view bound according to the longer side. -->
+			<enum name="match_longer" value="4" />
+
+			<!-- No view bound adjustment. -->
+			<enum name="no_adjustment" value="5" />
+
+		</attr>
+
+		<!-- Value used only when match_shorter or match_longer is used. -->
+		<!-- One must use this to specify desired width here instead of in layout_width. -->
+		<attr name="desired_width" format="enum|dimension">
+
+			<enum name="match_parent" value="-1" />
+
+		</attr>
+
+		<!-- Value used only when match_shorted or match_longer is used. -->
+		<!-- One must use this to specify desired height here instead of in layout_height. -->
+		<attr name="desired_height" format="enum|dimension">
+
+			<enum name="match_parent" value="-1" />
+
+		</attr>
+		
+	</declare-styleable>
+
+	<declare-styleable name="ScrollForwarderView">
+
+		<!-- Value used to indicate on which axis its children should be layout and hence -->
+		<!-- should scroll -->
+		<attr name="orientation" format="enum">
+
+			<!-- Layout children and scroll horizontally -->
+			<enum name="horizontal" value="1" />
+
+			<!-- Layout children and scroll vertically -->
+			<enum name="vertical" value="2" />
+
+		</attr>
+
+		<!-- Value used to indicate whether a given child is a forwardee container -->
+		<!-- If it is set to true, view bound of the child is guaranteed to be as big as -->
+		<!-- that of the parent scroll forwarder view, other layout params will be ignored -->
+		<attr name="layout_isForwardeeContainer" format="boolean" />
+
+	</declare-styleable>
+
+</resources>

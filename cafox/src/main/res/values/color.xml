@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Common -->
+	<color name="foreground_black_primary">#DE000000</color>
+	<color name="foreground_black_secondary">#8A000000</color>
+	<color name="foreground_black_tertiary">#42000000</color>
+	<color name="foreground_black_quaternary">#1F000000</color>
+
+	<color name="foreground_white_primary">#FFFFFFFF</color>
+	<color name="foreground_white_secondary">#B3FFFFFF</color>
+	<color name="foreground_white_tertiary">#4DFFFFFF</color>
+	<color name="foreground_white_quaternary">#1FFFFFFF</color>
+
+	<color name="background_white_primary">#FFFFFF</color>
+	<color name="background_white_secondary">#FAFAFA</color>
+	<color name="background_white_tertiary">#F5F5F5</color>
+	<color name="background_white_quaternary">#E0E0E0</color>
+
+	<color name="background_black_primary">#424242</color>
+	<color name="background_black_secondary">#303030</color>
+	<color name="background_black_tertiary">#212121</color>
+	<color name="background_black_quaternary">#000000</color>
+
+</resources>

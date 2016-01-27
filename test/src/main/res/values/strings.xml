@@ -1,0 +1,13 @@
+<resources>
+	<string name="app_name">CAFOX</string>
+
+	<!-- activity_crash_report_test -->
+	<string name="activity_crash_report_test_instruction">Touch the screen to trigger an exception.</string>
+
+	<!-- activity_month_calendar_view_test -->
+	<string name="activity_month_calendar_view_test_get_selected">Get selected day</string>
+	<string name="activity_month_calendar_view_test_previous_month">Previous month</string>
+	<string name="activity_month_calendar_view_test_next_month">Next month</string>
+	<string name="activity_month_calendar_view_test_select_today">Select Today</string>
+
+</resources>

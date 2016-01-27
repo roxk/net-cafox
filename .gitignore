@@ -1,0 +1,11 @@
+.gradle
+.idea
+.svn
+cafox/build
+test/build
+gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+build

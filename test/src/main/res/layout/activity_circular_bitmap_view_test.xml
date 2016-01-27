@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:cafox="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+
+		<!-- Big bitmap in small circle = down scaling. -->
+		<net.cafox.widget.CircularBitmapView
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			android:id="@+id/down_scale" />
+
+		<!-- Small bitmap in big circle = up scaling. -->
+		<net.cafox.widget.CircularBitmapView
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			android:layout_below="@id/down_scale"
+			android:id="@+id/up_scale" />
+
+		<!-- Only specify match_width. Ordinary usage. Positive result. -->
+		<net.cafox.widget.CircularBitmapView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/up_scale"
+			android:id="@+id/magenta"
+			cafox:viewBoundType="match_parent_width"
+			cafox:noBitmapColor="#FF00FF" />
+
+		<!-- Only specify match_height. Ordinary usage. But negative result since parent does not have a fixed height. -->
+		<net.cafox.widget.CircularBitmapView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/down_scale"
+			android:layout_above="@id/magenta"
+			android:id="@+id/red"
+			cafox:viewBoundType="match_parent_height"
+			cafox:noBitmapColor="#88FF0000" />
+
+		<!--&lt;!&ndash; Specify desired_width and desired_height and use match_shorter. Positive. &ndash;&gt;-->
+		<!--<net.cafox.widget.CircularBitmapView-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_below="@id/magenta"-->
+			<!--android:id="@+id/green"-->
+			<!--cafox:adjustViewBoundType="match_shorter"-->
+			<!--cafox:desired_width="match_parent"-->
+			<!--cafox:desired_height="100dp"-->
+			<!--cafox:noBitmapColor="#8800FF00" />-->
+
+		<!--&lt;!&ndash; Specify the same desired_width and desired_height as above and use match_longer. Positive. &ndash;&gt;-->
+		<!--<net.cafox.widget.CircularBitmapView-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_below="@id/green"-->
+			<!--cafox:adjustViewBoundType="match_longer"-->
+			<!--cafox:desired_width="match_parent"-->
+			<!--cafox:desired_height="100dp"-->
+			<!--cafox:noBitmapColor="#8800FFFF" />-->
+
+		<!--&lt;!&ndash; Have its view parent control its width, used together with match_width. Positive result. &ndash;&gt;-->
+		<!--<net.cafox.widget.CircularBitmapView-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_toRightOf="@id/green"-->
+			<!--android:layout_toLeftOf="@id/red"-->
+			<!--android:id="@+id/middle"-->
+			<!--cafox:adjustViewBoundType="match_width"-->
+			<!--cafox:noBitmapColor="#88FFFF00" />-->
+
+		<!--&lt;!&ndash; Have its view parent control its width, used together width match_height. Negative result. &ndash;&gt;-->
+		<!--&lt;!&ndash; Cannot avoid this on behalf of this view since the view bound is implicitly controlled &ndash;&gt;-->
+		<!--&lt;!&ndash; by its view parent. Alert users about this scenario. &ndash;&gt;-->
+		<!--<net.cafox.widget.CircularBitmapView-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_toRightOf="@id/green"-->
+			<!--android:layout_toLeftOf="@id/red"-->
+			<!--android:layout_below="@id/middle"-->
+			<!--cafox:adjustViewBoundType="match_height"-->
+			<!--cafox:noBitmapColor="#880000FF" />-->
+
+	</RelativeLayout>
+
+</ScrollView>
